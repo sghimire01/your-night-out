@@ -1,0 +1,46 @@
+<%- include('../partials/header.ejs'); -%>
+<body id="body">
+  <%- include('../partials/nav.ejs'); -%>
+
+    <br>
+    <br>
+    <div class="background">
+        <div id="container">
+            <div id="choose">
+                <h1> Movies</h1>
+                <h2>
+                    <%- cinema_name%>
+                </h2>
+                <br>
+                <form action="/itinerary/" method="POST">
+
+                    <%
+                        let cards = '<div class="card-columns">';
+                        <!-- Iterate the items object & update the cards variable -->
+                        data.forEach(function(data){
+                            cards += '<input type="radio" name="rest_id" value="' + data.film_id + '"><div class="card border-dark mb-3" style="width: 14rem;"><div class="card-header">' + data.film_name + '</div><div class="card-body"><strong>Genre:</strong><p>' + data.film_genre + '</p><strong>Showtimes:</strong><p>' + data.film_showtimes + '</p></div></div>';
+                        });
+                        cards += '</div>';
+                    %>
+                    <%- cards %>
+
+                    <input type="submit" value="Continue to Itinerary">
+                </form>
+            </div>
+            
+        </div>
+    </div>
+    <!-- <style>
+        .background {
+            width: 100vw;
+         height: 100vh;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjvdiwNl95dOyDDAJ_WdxauEjdjIfHA1ZcVg&usqp=CAU");
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden;
+        }
+      </style> -->
+<%- include('../partials/footer.ejs'); -%>

@@ -1,0 +1,102 @@
+        body {
+         width: 100vw;
+         height: 100vh;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+        }
+
+        .background {
+            width: 100vw;
+         height: 100vh;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjvdiwNl95dOyDDAJ_WdxauEjdjIfHA1ZcVg&usqp=CAU");
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        .shade {
+			top: 0;
+			left: 0;
+			width:100%;
+			height:100%;
+			position: absolute;
+			background:rgba(0, 0, 0, 0.7);
+		}
+
+        .myDiv h1 {
+            color:#fff;
+			font-size:50px;
+			font-weight: 600;
+			position: relative;
+            text-align: center;
+        }
+
+        .myDiv h3 {
+            color: white;
+			font-size:22px;
+			font-weight: 300;
+			margin: 10px;
+			position: relative;
+            text-align: center;
+        }
+
+        .card {
+            cursor: pointer;
+            margin:30px;
+            border-width: none;
+        }
+
+        .card-img {
+            height:150px;
+            width:200px;
+            background-size: cover;
+        }
+
+        .carousel-indicators {
+            bottom: -50px;
+        }
+
+        .carousel-control-prev, .carousel-control-next {
+            width: 5%;
+        }
+
+        .card-title {
+            background:white;
+            border: 5px solid white;
+            border-radius: 5px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 900;
+            color: black;
+            text-transform: uppercase;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: 1.25rem;
+            transform: translate(-50%, -50%);
+        }
+        .card:hover {
+            transform: scale(1.05);
+            /* border-color: rgb(1, 12, 36);
+            border-width: 5px; */
+        }
+
+        input[type="submit"] {width: 100%;}
+        input[type="submit"]:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        /* input[type="checkbox"]:checked {
+            background-color: green;
+            color: white;
+        }
+
+
+        input[type=checkbox].btn-check {
+            display:none;
+        } */

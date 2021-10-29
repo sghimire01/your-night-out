@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Sign Up</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <style>
+        h1 {
+            color: rgb(255, 255, 255);
+            text-align: center;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            font-size: 22px;
+            font-family: cursive;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Open Sans", sans-serif;
+            background-image: url('https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2020%2F10%2F22%2Fdate-ideas-20.jpg&q=85');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        
+        .signup-box {
+            width: 500px;
+            height: 400px;
+            background: rgba(24, 21, 21, 0.5);
+            color: #fff;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            box-sizing: border-box;
+            padding: 70px 30px;
+        }
+        
+        .signup-box p {
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+        }
+        
+        .signup-box input {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .signup-box input[type="email"],
+        input[type="password"],
+        input[type="text"] {
+            border: none;
+            border-bottom: 10 px solid #fff;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: #fff;
+            font-size: 14px;
+        }
+        
+        .signup-box input[type="submit"] {
+            background-color: #135af3;
+            color: white;
+            border: none;
+            font-size: 18px;
+            border-radius: 20px;
+            height: 40px;
+        }
+        
+        .signup-box input[type="submit"]:hover {
+            background-color: #c51cb7;
+            color: white;
+            cursor: pointer;
+        }
+        
+        .signup-box a,
+        div {
+            text-decoration: none;
+            font-size: 14px;
+            color: #fff;
+        }
+        
+        .signup-box a:hover {
+            opacity: 0.8;
+            color: #85e79d;
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="signup-box">
+        <h1>Sign up for Date Night</h1>
+        <form action="/register" method="POST">
+            <div>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+            </div>
+            <div>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <div>
+                <input type="password" id="password2" name="password2" placeholder="Confirm Password" required>
+            </div>
+            <div>
+                <input type="submit" value="Register" />
+            </div>
+            <a href="/login">Already have an account? Log in here</a>
+        </form>
+        <ul>
+            <% if(typeof errors != 'undefined'){ %>
+                <div class="alert alert-danger" role="alert">
+                    <% errors.forEach(error =>{ %>
+                        <li>
+                            <%= error.message %>
+                        </li>
+                        <%  }) %>
+                            <% } %>
+                </div>
+        </ul>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+
+</html>

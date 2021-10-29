@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your Night Out Homepage</title>
+    <meta http-equiv="=X-UA-Compatible" content="ie=edge">
+
+
+	<style>
+		/* Used https://www.youtube.com/watch?v=KWuZdD1aDPo as a reference for positioning and background */
+		body {
+			margin: 0;
+			padding: 0;
+			background-image: url('https://pbs.twimg.com/media/BrUV_8pCIAATYqK.jpg');
+			background-size: cover;
+		}
+		.shade {
+			top: 0;
+			left: 0;
+			width:100%;
+			height:100%;
+			position: absolute;
+			background:rgba(0, 0, 0, 0.5);
+		}
+		.box {
+			top:0;
+			left:0;
+			right:0;
+			width:100vw;
+			height:100vh;
+			position: relative;
+
+		}
+
+		.box .heads {
+			top:50%;
+			width:100%;
+			height:auto;
+			position: absolute;
+			transform: translateY(-50%);
+			text-shadow:0px 0.5px 5px rgba(0, 0, 0, 0.2);
+			text-align: center;
+			font-family: "Open Sans", sans-serif;
+		}
+
+		.box .heads h1 {
+			color:#fff;
+			font-size:50px;
+			font-weight: 600;
+			position: relative;
+		}
+
+		.box .heads h1 span {
+			color:#f06ec4;
+		}
+
+		.box .heads h3 {
+			color: white;
+			font-size:22px;
+			font-weight: 300;
+			margin:-2% 0 2% 0;
+			position: relative;
+		}
+
+		.box .heads .buttons{
+			height:auto;
+			width:100%;
+			display: flex;
+			text-align: center;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+		}
+
+		.box .heads .buttons a{
+			color:#fff;
+			text-align: center;
+			text-decoration: none;
+			font-family:'cinzel',sans-serif;
+			font-size:15px;
+			font-weight:300;
+			display:block;
+			border:1px solid rgba(255, 255, 255, 0.5);
+			height:auto;
+			width:150px;
+			padding:10px;
+			display: flex;
+			text-align: center;
+			align-items: center;
+			justify-content: center;
+			margin-left:1%;
+			border-radius: 2px;
+			transition: 0.5s ease-in-out;
+		}
+
+		.box .heads .buttons .login{
+			background:#f06ec4;
+			border:1px solid #f06ec4;
+		}
+
+		.box .heads .buttons a:hover{
+			background:#eec772;
+			border:1px solid #eec772;
+		}
+
+
+	</style>
+</head>
+
+<body>
+	<div class="shade"></div>
+	<div class="box">
+		<div class="heads">
+				<h1>WELCOME TO <span>YOUR NIGHT OUT</span></h1>
+				<h3>MAKE PLANNING YOUR NIGHT'S OUT WITH YOUR PARTNER EASIER</h3>
+				<div class="buttons">
+					<a class="login" href="/login">LOGIN</a>
+					<a class="signup" href="/signup">SIGN UP</a>
+				</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
+
+</body>
+</html>

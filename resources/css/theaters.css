@@ -1,0 +1,62 @@
+#container {
+    width: 1500px;
+    height: 750px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    background-color: rgb(221, 221, 221);
+    border-radius: 15px;
+}
+
+body {
+    background-color: rgb(248, 246, 225)
+}
+
+#title {
+    font-family: "Open Sans", sans-serif;
+    font-size: 32px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#title2 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 25px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#card1 {
+    position: absolute;
+    top: 40%;
+    left: 22%;
+    width: 500px;
+    height: 200px;
+}
+
+#card2 {
+    position: absolute;
+    top: 40%;
+    left: 52%;
+    width: 500px;
+    height: 200px;
+}
+
+#card3 {
+    position: absolute;
+    top: 65%;
+    left: 22%;
+    width: 500px;
+    height: 200px;
+}
+
+#card4 {
+    position: absolute;
+    top: 65%;
+    left: 52%;
+    width: 500px;
+    height: 200px;
+}
+
+.card-img-top {
+    float: inline-start;
+}

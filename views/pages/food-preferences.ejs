@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title></title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/709760caae.js" crossorigin="anonymous"></script>
+    <link href="../../resources/css/styles.css" type="text/css" rel="stylesheet">
+<link href="../../resources/css/food_preferences.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="background">
+        <div class="shade"></div>
+        <div class="myDiv">
+            <h1>Food preferences</h1>
+            <h3>Please select up to three options to generate restaurants near by.</h3>
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-interval="false">
+                <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <form action="/restaurants/" method="POST">    
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card-group">
+                            <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                                <img class="card-img" src="https://hips.hearstapps.com/del.h-cdn.co/assets/15/29/1437173075-delish-takeout-healthier.jpg" alt="Chinese card image">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Chinese</h5>
+                                    <div class="card-footer text-center">
+                                        <input type="checkbox" name="data" value="chinese" style="visibility: hidden">
+                                    </div> 
+                                </div>   
+                            </div>    
+                            <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                                <img class="card-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGWkDH2gQ8S1ytHGB0CV6jRrJkEBMh_rvSNA&usqp=CAU" alt="Italian card image">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Italian</h5>
+                                    <div class="card-footer text-center">
+                                        <input type="checkbox" name="data" value="italian" style="visibility: hidden">
+                                    </div>  
+                                </div>
+                            </div>    
+                            <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                                <img class="card-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5XJ9hN2RV7UxnFI2EdnFjY3wQCLW-nWCbsA&usqp=CAU" alt="Mexican card image">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Mexican</h5>
+                                    <div class="card-footer text-center">
+                                        <input type="checkbox" name="data" value="mexican" style="visibility: hidden">
+                                    </div>  
+                                </div>
+                            </div>        
+                        </div>      
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card-group">
+                            <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                                <img class="card-img" src="https://i.ndtvimg.com/i/2017-01/vegetarian-dinner-620_620x350_51484918976.jpg" alt="Veg card image">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Vegetarian</h5>
+                                    <div class="card-footer text-center">
+                                        <input type="checkbox" name="data" value="vegetarian" style="visibility: hidden">
+                                    </div> 
+                                </div>
+                            </div>    
+                            <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                                <img class="card-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJepQqVHKQt2xSRPmfmG-pO_mTu_AsINHQKg&usqp=CAU" alt="Indian card image">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Indian</h5>
+                                    <div class="card-footer text-center">
+                                        <input type="checkbox" name="data" value="indian" style="visibility: hidden">
+                                    </div> 
+                                </div>
+                            </div>    
+                            <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                                <img class="card-img" src="https://jpninfo.com/wp-content/uploads/2018/03/sushi-platter.jpg" alt="Jap card image">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Japanese</h5>
+                                    <div class="card-footer text-center">
+                                        <input type="checkbox" name="data" value="japanese" style="visibility: hidden">
+                                    </div> 
+                                </div>
+                            </div>      
+                        </div>      
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card-group">
+                            <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                                <img class="card-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFRwMH76nLp4u5qFJdW3-3rCgNeOzPj5UTYg&usqp=CAU" alt="American card image">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">American</h5>
+                                    <div class="card-footer text-center">
+                                        <input type="checkbox" name="data" value="american" style="visibility: hidden">
+                                    </div> 
+                                </div>
+                            </div>    
+                            <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                                <img class="card-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTaZ0NzQSRk995LUVPu-tBajN8Ibcv18XvBw&usqp=CAU" alt="Breakfast card image">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Breakfast</h5>
+                                    <div class="card-footer text-center">
+                                        <input type="checkbox" name="data" value="breakfast" style="visibility: hidden">
+                                    </div> 
+                                </div>
+                            </div>    
+                            <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                                <img class="card-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmQBuEbndq0L6eNkc1hJkOsuvv5DlCifa-IQ&usqp=CAU" alt="Thai card image">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">Thai</h5>
+                                    <div class="card-footer text-center">
+                                        <input type="checkbox" name="data" value="thai" style="visibility: hidden">
+                                    </div> 
+                                </div>
+                            </div>      
+                        </div>      
+                    </div>
+                </div>
+                <input type="submit" class="Submit">
+            </form>    
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <% if (error) { %>
+                <div class="alert alert-danger"><%- message %></div>
+                <% } %>
+        </div>  
+    </div>   
+    <script>
+        // from https://stackoverflow.com/questions/32935435/use-div-as-radio-button
+        $('.card.border-secondary.mb-3').click(function(){
+            if($(this).hasClass("selected")){
+                $(this).removeClass("selected");
+                $(this).find('input').attr("checked", false);
+                $(this).find('.card-img').attr("style", "border: '';");
+            } else {
+                $(this).addClass("selected");
+                $(this).find('input').attr("checked", true);
+                $(this).find('.card-img').attr("style", "border: 3.5px solid rgb(0,123,255);");
+            }
+        });
+    </script>   
+<%- include('../partials/footer.ejs'); -%>

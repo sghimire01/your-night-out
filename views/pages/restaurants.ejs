@@ -1,0 +1,57 @@
+<%- include('../partials/header.ejs'); -%>
+<body id="body">
+
+<%- include('../partials/nav.ejs'); -%>
+   <!-- <div class="container">
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-8">
+                <div>
+                <h1 class="display-4" style="color:white;">Your Night Out</h1>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="container rest">
+        <h1> Restaurants</h1>
+        <br>
+        <form name="form2" action="/movie-preferences/" method="POST">
+        <%
+            let cards = '<div class="card-columns">';
+            <!-- Iterate the items object & update the cards variable -->
+            data.forEach(function(data){
+                let ratingArr = [];
+                let i = 0;
+                for (; i < Math.floor(data.rating); i++){
+                    ratingArr[i] = '<span class="fa fa-star checked"></span>';
+                }
+                if (i < data.rating){
+                    ratingArr[i] = '<i class="fas fa-star-half"></i>'
+                }
+                let priceArr = ['<i class="fas fa-dollar-sign"></i>', '<i class="fas fa-dollar-sign"></i>', '<i class="fas fa-dollar-sign"></i>', '<i class="fas fa-dollar-sign"></i>', '<i class="fas fa-dollar-sign"></i>'];
+                i = 0;
+                for (; i < Math.floor(data.price_level); i++){
+                    priceArr[i] = '<i class="fas fa-dollar-sign checked"></i>';
+                }
+                let address = data.formatted_address.substr(0, (data.formatted_address.length - 15));
+                cards += '<div class="card" style="width: 14rem;" data-value="' + data.place_id + '"><div class="card-header">' + data.name + '</div><div class="card-body"><p>' + address + '</p><p>' + data.formatted_phone_number + '</p></div><ul class="list-group list-group-flush"><li class="list-group-item">' + ratingArr[0] + ratingArr[1] + ratingArr[2] + ratingArr[3] + ratingArr[4] + '</li><li class="list-group-item">' + priceArr[0] + priceArr[1] + priceArr[2] + priceArr[3] + priceArr[4] + '</li></ul><div class="card-body"><a href="' + data.website + '" target=”_blank” class="card-link">View Website</a></div></div>';
+            });
+            cards += '</div>';
+        %>
+        <%- cards %>
+        <input type="text" style="visibility: hidden" name="rest_id" required/>
+        <input type="submit" value="Continue to Movie Selection">
+        </div>
+        </form>
+    
+    <script>
+        // from https://stackoverflow.com/questions/32935435/use-div-as-radio-button
+        $('.container .card-columns .card').click(function(){
+        $(this).parent().find('.card').removeClass('selected');
+        $(this).addClass('selected');
+        var val = $(this).attr('data-value');
+        $(this).parent().parent().find('input:first').val(val);
+});
+    </script>
+<%- include('../partials/footer.ejs'); -%>

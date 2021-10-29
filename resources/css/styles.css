@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.fa.fa-star {
+    color: grey;
+}
+
+.fa.fa-star.checked {
+    color: orange;
+}
+
+.fas.fa-star-half {
+    color: orange;
+}
+
+.fas.fa-dollar-sign {
+    color: grey;
+    word-spacing: 0.4em;
+}
+
+.fas.fa-dollar-sign.checked {
+    color: rgb(40,167,69);
+    word-spacing: 0.4em;
+}
+
+.card {
+    border: 1px solid black;
+    cursor:pointer;
+}
+
+.card.selected {
+    border: 1.5px solid rgb(0,123,255);
+}
+
+
+/* Embedded Map CSS */
+#right-panel {
+    font-family: "Roboto", "sans-serif";
+    line-height: 30px;
+    padding-left: 10px;
+  }
+  
+  #right-panel select,
+  #right-panel input {
+    font-size: 15px;
+  }
+  
+  #right-panel select {
+    width: 100%;
+  }
+  
+  #right-panel i {
+    font-size: 12px;
+  }
+  
+  #map {
+    height: 100%;
+    float: left;
+    width: 63%;
+    height: 400px;
+  }
+  
+  #right-panel {
+    float: right;
+    width: 34%;
+    height: 400px;
+  }
+  
+  .panel {
+    height: 400px;
+    overflow: auto;
+  }
